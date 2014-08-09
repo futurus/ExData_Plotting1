@@ -1,0 +1,7 @@
+plot(data$Global_active_power, type = "l", axes = F, xlab="", ylab = "Global Active Power (kilowatts)")
+axis(1, at = c(1, nrow(data)/2+1, nrow(data)+1), labels=F)
+text(y=par('usr')[3]-(par('usr')[4]-par('usr')[3])/7, x = c(1, nrow(data)/2+1, nrow(data)+1), labels = c("Thu", "Fri", "Sat"), xpd=T)
+axis(2)
+box()
+dev.copy(png, "plot2.png")
+dev.off()
