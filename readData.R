@@ -20,7 +20,7 @@ for (i in seq(0, 100000/step, 1)) {
   chosens = c(which(temp[ , 1] == "1/2/2007"), which(temp[ , 1] == "2/2/2007"))
   
   if (length(chosens)) {
-    print(paste("found", chosens))
+    #print(paste("found", chosens))
     if (last.row) {
       data[(last.row+1):(last.row+length(chosens)), ] = temp[chosens, ]
     } else {
